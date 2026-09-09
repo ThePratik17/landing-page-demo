@@ -93,11 +93,11 @@ button:hover {
 .hero-image {
     width: 450px;
     height: 250px;
-    background-color: #6B7280;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+
+    background-image: url("./images/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
