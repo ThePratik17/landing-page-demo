@@ -1,1 +1,1 @@
-A project showcasing a demo MVP of a landing page. It is devoid of any functionality as it is made using html and css for now.
+A project showcasing a demo MVP of a landing page. It is devoid of any functionality as it is made using HTML and CSS for now.
