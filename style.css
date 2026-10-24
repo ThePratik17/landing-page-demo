@@ -1,5 +1,12 @@
 /* ---------- General ---------- */
 
+/* FIX 1: padding no longer add to an element's width. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     color: #1F2937;
@@ -21,7 +28,7 @@ body {
 }
 
 .nav {
-    height: 70px;
+    min-height: 70px; /* was height: 70px, which can't grow when the logo wraps */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,6 +206,22 @@ button:hover {
 /*----------Layout for smaller screens---------*/
 @media (max-width: 700px) {
 
+    /* FIX 2: header was never adjusted for mobile */
+    .nav {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
     .hero-content {
         flex-direction: column;
     }
@@ -214,19 +237,30 @@ button:hover {
 
     .card {
         width: 80%;
+        flex: none;
     }
 
     .hero-text h1 {
         font-size: 36px;
     }
 
+    .information h2 {
+        font-size: 28px;
+    }
+
+    .quote {
+        padding: 60px 0;
+    }
+
     .quote-text {
         font-size: 28px;
     }
 
+    /* FIX 3: 60px side padding was too much for a phone */
     .cta-box {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        padding: 35px 20px;
     }
 }
